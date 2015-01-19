@@ -1,0 +1,48 @@
+#punchcard {
+	width: 1000px;
+	display: block;
+	margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #eee;
+    shape-rendering: crispEdges;
+}
+ 
+.axis text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+ 
+.loading {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+ 
+.circle {
+    fill: green;
+    opacity: 0.5;
+    stroke:green;
+}
+.circle-mouseover {
+	fill: green;
+	stroke:green;
+	opacity: 0.75;
+}
+
+.tooltip {
+    font-family: sans-serif;
+    font-size: 15px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	fill: gray;
+	background-color: #EEEEEE;
+	opacity: 0.75;
+	position: absolute;
+	z-index: 10;
+	visibility: hidden;
+}
