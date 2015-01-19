@@ -114,7 +114,7 @@
         var text = '';
         var date = new Date(run["started"]);
         return date.toDateString() + ' ' + 
-        date.getHours() + ':' + (date.getMinutes().length == 1 ? 0 + date.getMinutes() : date.getMinutes()) + ' ' + 
+        date.getHours() + ':' + (date.getMinutes() < 9 ? '0' + date.getMinutes() : date.getMinutes()) + ' ' + 
         (run["distance"] / 1000).toFixed(2) + 'km';
     }
 })();
