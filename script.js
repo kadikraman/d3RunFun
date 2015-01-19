@@ -107,12 +107,14 @@
     }
 
     // there's definitely an easier way to do this. Using a d3 scale to map min to [0;99]
-    var min = d3.scale.linear().domain([0, 99]).range([0, 60]);
+    var min = d3.scale.linear().domain([0, 60]).range([0, 99]);
 
     // generates the tooltip text from the run data of individual run
     function generateTooltipText(run){
         var text = '';
         var date = new Date(run["started"]);
-        return date.toDateString() + ' ' + date.getHours() + ':' + date.getMinutes() + ' ' + (run["distance"] / 1000).toFixed(2) + 'km';
+        return date.toDateString() + ' ' + 
+        date.getHours() + ':' + (date.getMinutes().length == 1 ? 0 + date.getMinutes() : date.getMinutes()) + ' ' + 
+        (run["distance"] / 1000).toFixed(2) + 'km';
     }
 })();
